@@ -13,7 +13,6 @@ public partial class StarPage : ContentPage
         Title = "Avaleht";
         vsl = new VerticalStackLayout { BackgroundColor = Color.FromArgb("#FFC0CB") };
 
-        // Добавление кнопок для оставшихся страниц
         for (int i = 0; i < tekstid.Count; i++)
         {
             Button nupp = new Button
@@ -30,7 +29,7 @@ public partial class StarPage : ContentPage
             nupp.Clicked += Lehte_avamine;
         }
 
-        // Скроллинг для вертикального стека
+     
         sv = new ScrollView { Content = vsl };
         Content = sv;
     }
