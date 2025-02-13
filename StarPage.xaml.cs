@@ -2,8 +2,8 @@
 
 public partial class StarPage : ContentPage
 {
-    public List<ContentPage> lehed = new List<ContentPage>() { new DateTimePage(1), new StepperSliderPage(1) };
-    public List<string> tekstid = new List<string> { "Tee lahti DateTimePage", "Tee lahti StepperSliderPage" };
+    public List<ContentPage> lehed = new List<ContentPage>() { new DateTimePage(1), new StepperSliderPage(1), new RGB_mudeliPage(1)};
+    public List<string> tekstid = new List<string> { "Tee lahti DateTimePage", "Tee lahti StepperSliderPage", "Tee lahti RGB_mudeli" };
 
     ScrollView sv;
     VerticalStackLayout vsl;
