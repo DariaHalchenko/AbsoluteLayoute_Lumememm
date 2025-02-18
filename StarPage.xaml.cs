@@ -2,8 +2,8 @@
 
 public partial class StarPage : ContentPage
 {
-    public List<ContentPage> lehed = new List<ContentPage>() { new DateTimePage(1), new StepperSliderPage(1), new RGB_mudeliPage(1)};
-    public List<string> tekstid = new List<string> { "Tee lahti DateTimePage", "Tee lahti StepperSliderPage", "Tee lahti RGB_mudeli" };
+    public List<ContentPage> lehed = new List<ContentPage>() { new DateTimePage(1), new StepperSliderPage(1), new RGB_mudeliPage(1), new LumememmPage(1)};
+    public List<string> tekstid = new List<string> { "Tee lahti DateTimePage", "Tee lahti StepperSliderPage", "Tee lahti RGB_mudeli", "Tee lahti LumememmPage" };
 
     ScrollView sv;
     VerticalStackLayout vsl;
@@ -11,19 +11,19 @@ public partial class StarPage : ContentPage
     public StarPage()
     {
         Title = "Avaleht";
-        vsl = new VerticalStackLayout { BackgroundColor = Color.FromArgb("#FFC0CB") };
+        vsl = new VerticalStackLayout { BackgroundColor = Color.FromArgb("#9370DB") };
 
         for (int i = 0; i < tekstid.Count; i++)
         {
             Button nupp = new Button
             {
                 Text = tekstid[i],
-                BackgroundColor = Color.FromArgb("#EE82EE"),
-                TextColor = Color.FromArgb("#FF00FF"),
+                BackgroundColor = Color.FromArgb("#BA55D3"),
+                TextColor = Color.FromArgb("#800080"),
                 BorderWidth = 10,
                 ZIndex = i,
-                FontFamily = "Luckymoon 400",
-                FontSize = 30
+                FontFamily = "Luckyfield 400",
+                FontSize = 25
             };
             vsl.Add(nupp);
             nupp.Clicked += Lehte_avamine;
