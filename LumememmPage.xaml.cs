@@ -1,22 +1,15 @@
-using Microsoft.Maui.Controls;
+﻿using Microsoft.Maui.Controls;
+using Microsoft.Maui.Layouts;
 
 namespace AbsoluteLayoute_Lumememm;
 
 public partial class LumememmPage : ContentPage
 {
 	Frame framering, framesuurRing, framepang, framesilmad, framesilmad2, framenina, framenuppu, framenuppu2, framenuppu3;
-	Label header;
     AbsoluteLayout abs;
     public LumememmPage(int k)
 	{
         Title = "Lumememm";
-        header = new Label
-        {
-            Text = "Lumememm",
-            FontSize = 24,
-            HorizontalOptions = LayoutOptions.Center,
-            TextColor = Color.FromRgb(0, 0, 0)
-        };
 
         framepang = new Frame
         {
@@ -102,22 +95,18 @@ public partial class LumememmPage : ContentPage
 
         abs = new AbsoluteLayout
         {
-            Children = { framepang, framering, framesuurRing, framenina, framesilmad, framesilmad2 ,header, framenuppu, framenuppu2, framenuppu3},
+            Children = { framepang, framering, framesuurRing, framenina, framesilmad, framesilmad2, framenuppu, framenuppu2, framenuppu3},
             BackgroundColor = Color.FromArgb("#E0FFFF")
         };
-
-        AbsoluteLayout.SetLayoutBounds(header, new Rect(0, 10, 360, 40));
-
-        AbsoluteLayout.SetLayoutBounds(framepang, new Rect(155, 50, 50, 30));
-        AbsoluteLayout.SetLayoutBounds(framering, new Rect(135, 80, 100, 100));
-        AbsoluteLayout.SetLayoutBounds(framesuurRing, new Rect(120, 170, 150, 150));
-        AbsoluteLayout.SetLayoutBounds(framenina, new Rect(170, 140, 10, 20));
-        AbsoluteLayout.SetLayoutBounds(framesilmad, new Rect(155, 120, 5, 5));
-        AbsoluteLayout.SetLayoutBounds(framesilmad2, new Rect(180, 120, 5, 5));
-
-        AbsoluteLayout.SetLayoutBounds(framenuppu, new Rect(170, 140, 10, 20));
-        AbsoluteLayout.SetLayoutBounds(framenuppu2, new Rect(155, 120, 5, 5));
-        AbsoluteLayout.SetLayoutBounds(framenuppu3, new Rect(180, 120, 5, 5));
+        AbsoluteLayout.SetLayoutBounds(framesuurRing, new Rect(100, 350, 180, 180));
+        AbsoluteLayout.SetLayoutBounds(framering, new Rect(130, 260, 120, 120));
+        AbsoluteLayout.SetLayoutBounds(framepang, new Rect(120, 230, 140, 40));
+        AbsoluteLayout.SetLayoutBounds(framesilmad, new Rect(160, 300, 15, 15)); 
+        AbsoluteLayout.SetLayoutBounds(framesilmad2, new Rect(210, 300, 15, 15)); 
+        AbsoluteLayout.SetLayoutBounds(framenina, new Rect(185, 320, 15, 25));
+        AbsoluteLayout.SetLayoutBounds(framenuppu, new Rect(185, 390, 20, 20));
+        AbsoluteLayout.SetLayoutBounds(framenuppu2, new Rect(185, 430, 20, 20));
+        AbsoluteLayout.SetLayoutBounds(framenuppu3, new Rect(185, 470, 20, 20));
 
         Content = abs;
     }
